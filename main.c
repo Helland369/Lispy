@@ -6,9 +6,6 @@
 
 #include "mpc.h"
 
-// https://www.buildyourownlisp.com/chapter14_strings
-// Load Function
-
 #ifdef _WIN32
 
 static char buffer[2048];
@@ -42,7 +39,6 @@ struct lenv;
 typedef struct lval lval;
 typedef struct lenv lenv;
 
-// add SYM and sexpr as possible lval types
 enum { LVAL_NUM, LVAL_ERR, LVAL_SYM, LVAL_STR, LVAL_FUN, LVAL_SEXPR, LVAL_QEXPR, };
 
 typedef lval *(*lbuiltin)(lenv *, lval *);
